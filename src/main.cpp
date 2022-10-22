@@ -6,6 +6,7 @@
 #include <SFML/Graphics.hpp>
 // Include scenes
 #include "Scene.hpp"
+#include 
 
 // Entry point to the program
 int main(){
@@ -35,14 +36,14 @@ int main(){
                 continue;
             }
             
-            top.Input(event);
+            top.Input(&event);
         }
 
 	    // Clear the window at the start of every frame
         window.clear();
 
         // Do the fire rendering
-        top.Draw(window);
+        top.Draw(&window);
 
 	    // Display to the window
         window.display();

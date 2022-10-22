@@ -10,8 +10,8 @@ namespace lib {
             // Copy Constructor
             Scene(const Scene& rhs);
 
-            void Input(sf::Event event);
+            void Input(sf::Event& event);
 
-            void Draw(sf::RenderWindow window);
-    }
+            void Draw(sf::RenderWindow& window);
+    };
 }
