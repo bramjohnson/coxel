@@ -6,7 +6,7 @@
 #include <SFML/Graphics.hpp>
 // Include scenes
 #include "Scene.hpp"
-#include 
+#include "Click.hpp"
 
 // Entry point to the program
 int main(){
