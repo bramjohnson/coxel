@@ -16,8 +16,8 @@ int main(){
     const int width = 256;
     const int height = 256;
     // Create scene stack
-    std::stack<lib::Scene> scenes = new std::stack<lib::Scene>();
-    scenes.push(new game::Click());
+    std::stack<lib::Scene> scenes;
+    scenes.push(game::Click());
     // Create the window
     sf::RenderWindow window(sf::VideoMode(width,height), "Pixellege");
     // Limit to 30 FPS
@@ -27,7 +27,7 @@ int main(){
     while (window.isOpen())
     {
         // Pop top scene in the game
-        lib::Scene top = scenes.pop();
+        lib::Scene top = scenes.top();
 
         sf::Event event;
         while (window.pollEvent(event)){
@@ -36,14 +36,14 @@ int main(){
                 continue;
             }
             
-            top.Input(&event);
+            top.Input(event);
         }
 
 	    // Clear the window at the start of every frame
         window.clear();
 
         // Do the fire rendering
-        top.Draw(&window);
+        top.Draw(window);
 
 	    // Display to the window
         window.display();

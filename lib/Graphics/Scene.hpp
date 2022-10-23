@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SCENE_HPP
+#define SCENE_HPP
 
 namespace lib {
     class Scene {
@@ -17,3 +18,5 @@ namespace lib {
             void Draw(sf::RenderWindow& window);
     };
 }
+
+#endif
