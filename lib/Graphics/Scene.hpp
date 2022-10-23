@@ -1,21 +1,12 @@
 #ifndef SCENE_HPP
 #define SCENE_HPP
+#include <SFML/Graphics.hpp>
 
 namespace lib {
     class Scene {
         public:
-            // Default constructor
-            Scene();
-
-            // Destructor
-            ~Scene();
-
-            // Copy Constructor
-            Scene(const Scene& rhs);
-
-            void Input(sf::Event& event);
-
-            void Draw(sf::RenderWindow& window);
+            virtual void Input(sf::Event& event) = 0;
+            virtual void Draw(sf::RenderWindow& window) = 0;
     };
 }
 
